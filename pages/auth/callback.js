@@ -33,7 +33,6 @@ export default class Callback extends Component {
         return (
             <div style={style}>
                <h1>
-                   Your Awesome Callback Page
                </h1>
             </div>
         )
