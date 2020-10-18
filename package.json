@@ -8,8 +8,16 @@
     "start": "next start"
   },
   "dependencies": {
+    "@auth0/auth0-react": "^1.1.0",
+    "auth0": "^2.29.0",
+    "auth0-js": "^9.14.0",
+    "isomorphic-unfetch": "^3.1.0",
+    "jwt-decode": "^3.0.0",
+    "mongoose": "^5.10.9",
     "next": "9.5.4",
     "react": "16.13.1",
-    "react-dom": "16.13.1"
+    "react-dom": "16.13.1",
+    "semantic-ui-css": "^2.4.1",
+    "semantic-ui-react": "^2.0.0"
   }
 }
