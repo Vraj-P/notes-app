@@ -1,6 +1,7 @@
 import React from 'react'
 import Link from 'next/link'
 import Auth from '../lib/Auth';
+import Typography from "@material-ui/core/Typography"
 const auth = new Auth();
 
 var handleAuth = function (params) {
@@ -19,7 +20,7 @@ export default class Nav extends React.Component {
       <nav>
         <ul>
             <li>
-              <a onClick={()=>this.handleLogin()}>Login / Register</a>
+              <Typography style={{color:'#33322A'}} onClick={()=>this.handleLogin()} component="h3" variant="h3">Login / Register</Typography>
             </li>
         </ul>
 

@@ -2,6 +2,8 @@ import fetch from 'isomorphic-unfetch';
 import { useState, useEffect } from 'react';
 import { useRouter } from 'next/router';
 import { Confirm, Button, Loader } from 'semantic-ui-react';
+import Container from "@material-ui/core/Container"
+import Typography from "@material-ui/core/Typography"
 
 const Note = ({ note }) => {
     const [confirm, setConfirm] = useState(false);
@@ -38,20 +40,22 @@ const Note = ({ note }) => {
 
     return (
         <div className="note-container">
-            {isDeleting
-                ? <Loader active />
-                :
-                <>
-                    <h1>{note.title}</h1>
-                    <p>{note.description}</p>
-                    <Button color='red' onClick={open}>Delete</Button>
-                </>
-            }
-            <Confirm
-                open={confirm}
-                onCancel={close}
-                onConfirm={handleDelete}
-            />
+            <Container className="view-note-bg">
+                {isDeleting
+                    ? <Loader active />
+                    :
+                    <>
+                        <Typography style={{color:'#33322A'}} align="center" component="h3" variant="h3" gutterBottom>{note.title}</Typography>
+                        <Typography style={{color:'#33322A'}} align="center" component="h5" variant="h5" gutterBottom>{note.description}</Typography>
+                        <Button className="form-submit-btn" color='red' onClick={open}><Typography style={{color:'#33322A'}} align="center" component="h5" variant="h5">DELETE</Typography></Button>
+                    </>
+                }
+                <Confirm
+                    open={confirm}
+                    onCancel={close}
+                    onConfirm={handleDelete}
+                />
+            </Container>
         </div>
     )
 }

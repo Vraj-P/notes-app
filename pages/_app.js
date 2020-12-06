@@ -2,10 +2,20 @@
 import 'semantic-ui-css/semantic.min.css'
 import Layout from '../components/Layout';
 import '../css/style.css';
+import '../css/style.scss';
+import {Theme} from "../theme"
+import { ThemeProvider } from '@material-ui/core/styles';
+
 
 function MyApp({ Component, pageProps }) {
 
-    return <Layout><Component {...pageProps} /></Layout>
+    return (
+    <Layout>
+        <ThemeProvider theme={Theme}>
+            <Component {...pageProps} />
+        </ThemeProvider>
+    </Layout>
+    )
 }
 
 // Only uncomment this method if you have blocking data requirements for

@@ -3,6 +3,9 @@ import { useState, useEffect } from 'react';
 import fetch from 'isomorphic-unfetch';
 import { Button, Form, Loader } from 'semantic-ui-react';
 import { useRouter } from 'next/router';
+import Typography from "@material-ui/core/Typography"
+import Container from "@material-ui/core/Container"
+import TextField from "@material-ui/core/TextField"
 
 const EditNote = ({ note }) => {
     const [form, setForm] = useState({ title: note.title, description: note.description });
@@ -66,34 +69,63 @@ const EditNote = ({ note }) => {
 
     return (
         <div className="form-container">
-            <h1>Update Note</h1>
-            <div>
-                {
-                    isSubmitting
-                        ? <Loader active inline='centered' />
-                        : <Form onSubmit={handleSubmit}>
-                            <Form.Input
-                                fluid
-                                error={errors.title ? { content: 'Please enter a title', pointing: 'below' } : null}
-                                label='Title'
-                                placeholder='Title'
-                                name='title'
-                                onChange={handleChange}
-                                value={form.title}
-                            />
-                            <Form.TextArea
-                                fluid
-                                label='Descriprtion'
-                                placeholder='Description'
-                                name='description'
-                                error={errors.description ? { content: 'Please enter a description', pointing: 'below' } : null}
-                                onChange={handleChange}
-                                value={form.description}
-                            />
-                            <Button type='submit'>Update</Button>
-                        </Form>
-                }
-            </div>
+            <Container className="edit-note-bg">
+                <Typography style={{color:'#33322A'}} align="center" component="h3" variant="h3" gutterBottom>Update Note</Typography>
+                <div>
+                    {/*
+                        isSubmitting
+                            ? <Loader active inline='centered' />
+                            : <Form onSubmit={handleSubmit}>
+                                <Form.Input
+                                    fluid
+                                    error={errors.title ? { content: 'Please enter a title', pointing: 'below' } : null}
+                                    label='Title'
+                                    placeholder='Title'
+                                    name='title'
+                                    onChange={handleChange}
+                                    value={form.title}
+                                />
+                                <Form.TextArea
+                                    fluid
+                                    label='Descriprtion'
+                                    placeholder='Description'
+                                    name='description'
+                                    error={errors.description ? { content: 'Please enter a description', pointing: 'below' } : null}
+                                    onChange={handleChange}
+                                    value={form.description}
+                                />
+                                <Button type='submit'>Update</Button>
+                            </Form>
+                    */}
+                    <form noValidate autoComplete="off">
+                        <TextField
+                            className="textfield-title"
+                            fullWidth = "true"
+                            id="user-input-title"
+                            label="Title"
+                            multiline
+                            rows={1}
+                            placeholder = "Type Here..."
+                            variant="filled"
+                            autoComplete="off"
+                            style={{color:'#33322A'}}
+                        />
+                        <TextField
+                            className="textfield-content"
+                            fullWidth = "true"
+                            id="user-input-note"
+                            label="Create Greatness"
+                            multiline
+                            rows={10}
+                            placeholder = "Type Here..."
+                            variant="filled"
+                            autoComplete="off"
+                            stye={{color:'#33322A'}}
+                        />
+                        <Button className="form-submit-btn" variant="outlined"><Typography style={{color:'#33322A'}} align="center" component="h5" variant="h5">SAVE</Typography></Button>
+                    </form>
+                </div>
+            </Container>
         </div>
     )
 }

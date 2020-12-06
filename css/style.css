@@ -1,3 +1,9 @@
+.main-container{
+    height: 100% !important;
+    display: flex;
+    flex-direction: column;
+}
+
 h1 {
     text-align: center;
 }
@@ -10,35 +16,77 @@ h1 {
 
 .navbar {
     padding: 20px;
-    margin-bottom: 20px;
     background: black;
-    color: #fff;
     display: flex;
     justify-content: space-between;
 }
 
-.navbar .create {
-    color: #fff;
-    font-size: 1.5rem;
-}
-
 .navbar .navbar-brand {
-    color: #fff;
     font-size: 2rem;
 }
 
-.navbar-brand:hover, .create:hover {
-    color: #fff;
+.form-container {
+    flex-grow: 1;
+    background-color: #33322A;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
-.form-container {
-    width: 400px;
-    margin: 20px auto;
+.form-bg{
+    background-color: #E7DDB8;
+    height: 600px;
+    padding: 40px;
+}
+
+.notes-container{
+    flex-grow: 1;
+    background-color: #33322A;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.bg-notes{
+    background-color: #E7DDB8;
+    height: 600px;
+    padding: 40px;
+    overflow-y: scroll;
+}
+
+.view-note-bg{
+    background-color: #E7DDB8;
+    height: 600px;
+    padding: 40px;
+    overflow-y: scroll;
+}
+
+.edit-note-bg{
+    background-color: #E7DDB8;
+    height: 600px;
+    padding: 40px;
+    overflow-y: scroll; 
+}
+
+html{
+    height: 100%;
+    overflow-y: hidden;
+}
+
+#__next{
+    height: 100%;
+    overflow-y: hidden;
+}
+
+body{
+    height: 100%;
+    overflow-y: hidden;
 }
 
 .note-container {
     text-align: center;
-    margin-top: 20px;
 }
 
 .grid {
@@ -46,3 +94,29 @@ h1 {
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 10px;
 }
+
+.header-notes{
+    color: #33322A;
+    font-weight: 400;
+    font-size: 3rem;
+}
+
+.index-home-container{
+    flex-grow: 1;
+    background-color: #33322A;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.index-home-bg{
+    background-color: #E7DDB8;
+    height: 600px;
+    padding: 40px;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+}
+
