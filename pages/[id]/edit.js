@@ -72,11 +72,11 @@ const EditNote = ({ note }) => {
             <Container className="edit-note-bg">
                 <Typography style={{color:'#33322A'}} align="center" component="h3" variant="h3" gutterBottom>Update Note</Typography>
                 <div>
-                    {/*
+                    {
                         isSubmitting
                             ? <Loader active inline='centered' />
                             : <Form onSubmit={handleSubmit}>
-                                <Form.Input
+                                <Form.TextArea
                                     fluid
                                     error={errors.title ? { content: 'Please enter a title', pointing: 'below' } : null}
                                     label='Title'
@@ -96,34 +96,7 @@ const EditNote = ({ note }) => {
                                 />
                                 <Button type='submit'>Update</Button>
                             </Form>
-                    */}
-                    <form noValidate autoComplete="off">
-                        <TextField
-                            className="textfield-title"
-                            fullWidth = "true"
-                            id="user-input-title"
-                            label="Title"
-                            multiline
-                            rows={1}
-                            placeholder = "Type Here..."
-                            variant="filled"
-                            autoComplete="off"
-                            style={{color:'#33322A'}}
-                        />
-                        <TextField
-                            className="textfield-content"
-                            fullWidth = "true"
-                            id="user-input-note"
-                            label="Create Greatness"
-                            multiline
-                            rows={10}
-                            placeholder = "Type Here..."
-                            variant="filled"
-                            autoComplete="off"
-                            stye={{color:'#33322A'}}
-                        />
-                        <Button className="form-submit-btn" variant="outlined"><Typography style={{color:'#33322A'}} align="center" component="h5" variant="h5">SAVE</Typography></Button>
-                    </form>
+                    }
                 </div>
             </Container>
         </div>
