@@ -1,0 +1,88 @@
+.navbar{
+    background-color: #E7DDB8;
+    height: 200px;
+}
+
+.logo-container{
+    border: 3px solid #33322A;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.navbar-brand{
+    text-decoration: none;
+    color: #707070;
+}
+
+.add-btn{
+    position: absolute !important;
+    bottom: 0px;
+    right: 0px;
+    margin-bottom: 70px !important;
+    margin-right: 70px !important;
+}
+
+
+.MuiFab-root{
+    height: 100px !important;
+    width: 100px !important;
+}
+
+.MuiFab-primary{
+    background-color: #E7DDB8 !important;
+    color: #33322A !important;
+}
+
+.MuiSvgIcon-root{
+    height: 40px !important;
+    width: 40px !important;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    .textfield-title{
+        margin-bottom: 30px;
+    }
+    .textfield-content{
+        margin-bottom: 30px;
+    }
+    .form-submit-btn{
+        background-color: #E7DDB8 !important;
+        border: 3px solid #33322A !important;
+        border-radius: 20px !important;
+    }
+    .MuiFormLabel-root.Mui-focused{
+        color:#33322A !important;
+    }
+    .MuiFilledInput-underline:hover:before{
+        border-bottom: 1px solid #E7DDB8 !important;
+    }
+    .MuiFilledInput-underline:after{
+        border-bottom: 2px solid #33322A !important;
+    }
+}
+
+.note-container{
+    height: 100%;
+    background-color: #33322A;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    .view-note-bg{
+        .form-submit-btn{
+            background-color: #E7DDB8 !important;
+            border: 3px solid #33322A !important;
+            border-radius: 20px !important;
+        }
+    }
+}
+
+
+
+
