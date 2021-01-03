@@ -1,6 +1,7 @@
 import React from 'react'
 import Link from 'next/link';
 import Head from '../components/head'
+<<<<<<< Updated upstream
 import Nav from '../components/nav'
 
 const Home = () => (
@@ -61,6 +62,19 @@ const Home = () => (
           color: #333;
         }
       `}</style>
+=======
+import Container from "@material-ui/core/Container"
+import { Typography } from '@material-ui/core';
+
+const Home = () => (
+    <div className="index-home-container">
+      <Head title="Home" />
+  
+        <Container className="index-home-bg">
+          <Typography align="center" component="h1" variant="h1">Welcome to The Notes App!</Typography>
+        </Container>
+
+>>>>>>> Stashed changes
     </div>
   )
   
